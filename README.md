@@ -23,8 +23,11 @@ Then visit <http://localhost:8000>. The site has no build step or package depend
 - Per-exercise walkthrough notes and live flowcharts that follow the current typing position.
 - The built-in lesson and Rank 03 reference guide, plus solution animations where provided.
 - Responsive layout, collapsible sidebar, and reset controls. Progress persists in the current browser.
+- Interactive, step-by-step algorithm motion for powerset, permutations, n_queens, and rip. The powerset view includes a binary recursion tree: each node shows the `solve` call at that depth, the active branch, the complete call stack, and the stdout lines produced at `print`. The visualizer uses GSAP from jsDelivr for transitions and includes playback, previous/next, a seek bar, and keyboard controls.
+- A custom SVG favicon for the browser tab.
+- The Powerset animation is a local fork of the supplied `Powerset Backtracking.html` player. It opens as a near-fullscreen floating 16:9 video player and starts automatically.
 
-The legacy page itself describes this as typing practice: it does not compile or execute the C solutions in the browser.
+The legacy page itself describes this as typing practice: it does not compile or execute the C solutions in the browser. GSAP and the original font stylesheet load from public CDNs; the visualizer controls remain available if GSAP cannot load.
 
 ## Project layout
 

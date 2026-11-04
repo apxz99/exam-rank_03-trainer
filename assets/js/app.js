@@ -242,27 +242,32 @@ function openSpeed() {
 // Right panel: the problem laid out as UMPIRE (BRIEF + UMPIRE in walkthrough.js),
 // with the subject and the Thai note folded on top. Redrawn when the problem or
 // the answer set changes (Plan has steps per set).
-// Animations of the logic (video/<problem>/backtrack.html), opened from the UMPIRE panel.
-// `url` is the same page published on its own, for "เปิดแยก".
+// Interactive algorithm explanations, opened from the UMPIRE panel.
 const ANIM = {
-  powerset: { file: 'video/powerset/backtrack.html', url: 'https://claude.ai/artifact/R4PnAeW6yY83v8ynAcPiUo',
-              title: 'powerset · backtracking ทีละขั้น' },
-  permutations: { file: 'video/anim.html#permutations', url: 'https://claude.ai/artifact/Pn3x36PHQfE9PxfWnfMTg4#permutations', title: 'permutations · backtracking ทีละขั้น' },
-  n_queens: { file: 'video/anim.html#n_queens', url: 'https://claude.ai/artifact/Pn3x36PHQfE9PxfWnfMTg4#n_queens', title: 'n_queens · backtracking ทีละขั้น' },
-  rip: { file: 'video/anim.html#rip', url: 'https://claude.ai/artifact/Pn3x36PHQfE9PxfWnfMTg4#rip', title: 'rip · backtracking ทีละขั้น' },
+  powerset: { title: 'powerset · เลือกชุดย่อยให้ผลรวมเป็นเป้าหมาย' },
+  permutations: { title: 'permutations · สร้างทุกลำดับด้วย backtracking' },
+  n_queens: { title: 'n_queens · วางควีนโดยไม่ให้โจมตีกัน' },
+  rip: { title: 'rip · ลบวงเล็บให้น้อยที่สุด' },
 };
 function openAnim(id) {
   const a = ANIM[id];
   if (!a) return;
   $('#animTitle').textContent = a.title;
-  $('#animOpen').href = a.url;
-  $('#animFrame').src = a.file;
-  $('#animFrame').onload = () => { try { $('#animFrame').contentWindow.focus(); } catch (e) {} };
+  const isPowersetVideo = id === 'powerset';
+  $('#anim').classList.toggle('videoPlayer', isPowersetVideo);
+  $('#animFrame').hidden = !isPowersetVideo;
+  if (isPowersetVideo) {
+    $('#animFrame').src = 'assets/animations/powerset-backtracking.html';
+    $('#animFrame').onload = () => { try { $('#animFrame').contentWindow.focus(); } catch (e) {} };
+  }
+  else AlgorithmMotion.open(id);
   $('#anim').showModal();
 }
 function closeAnim() {
   $('#anim').close();
-  $('#animFrame').src = 'about:blank';   // stops it playing
+  $('#anim').classList.remove('videoPlayer');
+  $('#animFrame').src = 'about:blank';
+  AlgorithmMotion.close();
 }
 
 function renderUmpire() {

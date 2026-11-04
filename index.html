@@ -1,4 +1,4 @@
-<!doctype html><html lang="th" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0a0c10"><title>Exam Rank 03 Trainer</title><link rel="stylesheet" href="assets/css/fonts.css"><link rel="stylesheet" href="assets/css/app.css"></head><body><svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<!doctype html><html lang="th" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0a0c10"><title>Exam Rank 03 Trainer</title><link rel="icon" type="image/svg+xml" href="assets/favicon.svg"><link rel="stylesheet" href="assets/css/fonts.css"><link rel="stylesheet" href="assets/css/app.css"></head><body><svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-panel" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M9 3v18"></path></symbol>
   <symbol id="i-book" viewBox="0 0 24 24"><path d="M2 4h6a4 4 0 0 1 4 4v12a3 3 0 0 0-3-3H2z"></path><path d="M22 4h-6a4 4 0 0 0-4 4v12a3 3 0 0 1 3-3h7z"></path></symbol>
   <symbol id="i-timer" viewBox="0 0 24 24"><path d="M10 2h4"></path><path d="M12 14l3-3"></path><circle cx="12" cy="14" r="8"></circle></symbol>
@@ -217,11 +217,26 @@ $&gt; ./rip '(()(()(' | cat -e
 <dialog id="anim" class="anim" aria-labelledby="animTitle">
   <div class="animHead">
     <h3 id="animTitle">ภาพเคลื่อนไหว</h3>
-    <a class="btn" id="animOpen" target="_blank" rel="noopener" title="เปิดในแท็บใหม่"><svg class="ic" aria-hidden="true"><use href="#i-link"></use></svg>เปิดแยก</a>
     <button type="button" class="btn" id="animClose"><svg class="ic" aria-hidden="true"><use href="#i-x"></use></svg>ปิด</button>
   </div>
-  <iframe id="animFrame" title="ภาพเคลื่อนไหว" allow="fullscreen" src="./saved_resource.html"></iframe>
-  <p class="animKeys">คลิกที่ภาพ / Space = หยุด · ← → = ถอย / ข้าม 5 วินาที · ปุ่มมุมขวาบน = เต็มจอ</p>
+  <iframe id="animFrame" hidden title="ภาพเคลื่อนไหว powerset" allow="fullscreen"></iframe>
+  <div class="motionPlayer">
+    <div class="motionStage" id="motionStage" aria-label="ภาพแสดงขั้นตอนอัลกอริทึม"></div>
+    <aside class="motionAside">
+      <div class="motionStep" id="motionStep" aria-live="polite"></div>
+      <h4 id="motionHeading"></h4>
+      <p id="motionDescription"></p>
+      <p class="motionHint" id="motionHint"></p>
+    </aside>
+  </div>
+  <div class="motionControls">
+    <button type="button" class="btn" id="motionPrev" aria-label="ย้อนหนึ่งขั้น">← ก่อนหน้า</button>
+    <button type="button" class="btn go" id="motionToggle" aria-label="เล่นภาพเคลื่อนไหว"><svg class="ic" aria-hidden="true"><use href="#i-play"></use></svg><span>เล่น</span></button>
+    <button type="button" class="btn" id="motionNext" aria-label="ไปขั้นถัดไป">ถัดไป →</button>
+    <input type="range" id="motionRange" min="0" max="1" value="0" aria-label="เลือกขั้นตอน">
+    <span class="motionCount" id="motionCount"></span>
+  </div>
+  <p class="animKeys">กด Space เพื่อเล่น/หยุด · ใช้ปุ่มลูกศรซ้าย/ขวาเพื่อเลื่อนขั้น · ลากแถบเพื่อข้ามไปยังขั้นที่ต้องการ</p>
 </dialog>
 
 <dialog id="help" class="help" aria-labelledby="helpTitle">
@@ -376,4 +391,6 @@ if (r &lt; 0)       // read พัง
 <script src="assets/js/readable-solutions.js"></script>
 <script src="assets/js/walkthrough.js"></script>
 <script src="assets/js/flowcharts.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+<script src="assets/js/algorithm-motion.js"></script>
 <script src="assets/js/app.js"></script></body></html>
