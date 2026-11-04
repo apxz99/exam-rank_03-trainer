@@ -1,0 +1,379 @@
+<!doctype html><html lang="th" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0a0c10"><title>Exam Rank 03 Trainer</title><link rel="stylesheet" href="assets/css/fonts.css"><link rel="stylesheet" href="assets/css/app.css"></head><body><svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-panel" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M9 3v18"></path></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M2 4h6a4 4 0 0 1 4 4v12a3 3 0 0 0-3-3H2z"></path><path d="M22 4h-6a4 4 0 0 0-4 4v12a3 3 0 0 1 3-3h7z"></path></symbol>
+  <symbol id="i-timer" viewBox="0 0 24 24"><path d="M10 2h4"></path><path d="M12 14l3-3"></path><circle cx="12" cy="14" r="8"></circle></symbol>
+  <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></symbol>
+  <symbol id="i-reset" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"></path><circle cx="12" cy="12" r="3"></circle></symbol>
+  <symbol id="i-term" viewBox="0 0 24 24"><path d="M4 17l6-6-6-6"></path><path d="M12 19h8"></path></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M6 3l14 9-14 9z"></path></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18"></path><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"></path><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></symbol>
+  <symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"></path></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"></path><path d="M6 6l12 12"></path></symbol>
+  <symbol id="i-link" viewBox="0 0 24 24"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></symbol>
+  <symbol id="i-keyboard" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"></rect><path d="M6 9h.01M10 9h.01M14 9h.01M18 9h.01M6 13h.01M18 13h.01M8 16h8"></path></symbol>
+  <symbol id="i-stop" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="1"></rect></symbol>
+</svg>
+
+<main class="layout typing" id="layout">
+  <aside class="side" id="side">
+    <div class="sideHead">
+      <span class="brand label">Rank 03</span>
+      <button class="iconBtn" id="sideToggle" title="ซ่อน/แสดงแถบซ้าย" aria-label="ซ่อน/แสดงแถบซ้าย" aria-expanded="true"><svg class="ic" aria-hidden="true"><use href="#i-panel"></use></svg></button>
+    </div>
+
+    <div class="sideBody label">
+      <div id="practiceSide">
+        <div class="group">Level 1</div>
+        <div id="list1"><button class="prob done">filter<span class="mark" aria-label="พิมพ์ครบแล้ว">✓</span></button><button class="prob done">ft_scanf<span class="mark" aria-label="พิมพ์ครบแล้ว">✓</span></button><button class="prob done">broken_gnl<span class="mark" aria-label="พิมพ์ครบแล้ว">✓</span></button></div>
+        <div class="group">Level 2</div>
+        <div id="list2"><button class="prob done">powerset<span class="mark" aria-label="พิมพ์ครบแล้ว">✓</span></button><button class="prob done">permutations<span class="mark" aria-label="พิมพ์ครบแล้ว">✓</span></button><button class="prob done">tsp<span class="mark" aria-label="พิมพ์ครบแล้ว">✓</span></button><button class="prob done">n_queens<span class="mark" aria-label="พิมพ์ครบแล้ว">✓</span></button><button class="prob done on">rip<span class="mark" aria-label="พิมพ์ครบแล้ว">✓</span></button></div>
+        <p class="progress" id="progressText">พิมพ์ครบแล้ว 8/8</p>
+      </div>
+    </div>
+
+    <div class="sideFoot">
+      <button class="btn" id="helpBtn" title="คู่มือ"><svg class="ic" aria-hidden="true"><use href="#i-help"></use></svg><span class="label">คู่มือ</span></button>
+      <button class="btn" id="resetAllBtn" title="ลบโค้ดและความคืบหน้าทั้งหมดในเบราว์เซอร์นี้"><svg class="ic" aria-hidden="true"><use href="#i-trash"></use></svg><span class="label">รีเซ็ตเว็บ</span></button>
+    </div>
+  </aside>
+
+  <section class="speed" id="speed" aria-labelledby="speedTitle">
+    <div class="speedHead">
+      <div class="speedTitle">ซ้อมพิมพ์ <span id="speedTitle">rip</span><span class="tabs" id="speedSet" title="เลือกเฉลยที่จะพิมพ์"><button type="button" data-set="ref" class="" title="เฉลยหลักของเว็บนี้">เฉลยหลัก</button><button type="button" data-set="modey" class="" title="เฉลยของ Modey-Codey: แยกเป็นฟังก์ชันเล็ก ๆ อ่านง่าย">Modey</button><button type="button" data-set="short" class="on" title="เฉลยสั้น: โค้ดน้อยที่สุด จำง่าย ใช้แค่ฟังก์ชันที่ subject อนุญาต · มีคอมเมนต์ท้ายบรรทัด (ไม่ต้องพิมพ์)">สั้น</button><button type="button" data-set="easy" title="เฉลยอ่านง่าย: แยกหน้าที่เป็นฟังก์ชันย่อยและมีคำอธิบาย">อ่านง่าย</button></span><span class="tabs files" id="speedFiles"><code>rip.c</code></span></div>
+      <div class="speedStats" aria-live="polite">
+        <span><b id="spProg">0%</b> <span id="spProgL">พิมพ์แล้ว</span></span>
+        <span><b id="spErr">0</b> <span id="spErrL">พิมพ์ผิด</span></span>
+        <span><b id="spTime">0:00.0</b> เวลา</span>
+      </div>
+      <div class="actions">
+        <span class="tabs" id="spGhostMode" title="เห็นเฉลยจาง ๆ / ซ่อนคำแบบสุ่ม ปรับได้ 30–90% (สุ่มใหม่ทุกรอบ) / ซ่อนทั้งหมด">
+          <button data-g="show" class="on">เห็นเฉลย</button><button data-g="half">ครึ่งเดียว</button><button data-g="hide">ซ่อนเฉลย</button>
+        </span>
+        <span class="tabs" id="spHideLevel" hidden="" title="ซ่อนกี่เปอร์เซ็นต์ของคำ (สุ่มใหม่ทุกรอบ)"><button data-h="30" class="on">30%</button><button data-h="50">50%</button><button data-h="70">70%</button><button data-h="90">90%</button></span>
+      <button class="btn" id="spHint" hidden="" title="ดูคำถัดไป กดอีกครั้งดูทั้งบรรทัด (Ctrl+/)"><svg class="ic" aria-hidden="true"><use href="#i-eye"></use></svg>ใบ้ <kbd>Ctrl /</kbd></button>
+        <button class="btn" id="spWhole" hidden=""><svg class="ic" aria-hidden="true"><use href="#i-keyboard"></use></svg>ทั้งไฟล์</button>
+      <button class="btn" id="speedRestart"><svg class="ic" aria-hidden="true"><use href="#i-reset"></use></svg>เริ่มใหม่</button>
+        </div>
+    </div>
+    <div class="practiceBody">
+      <div class="speedEditor" id="speedEditor">
+        <div class="speedScroll" id="speedScroll">
+          <pre class="speedGutter" id="speedGutter" aria-hidden="true"><span class="sec">1</span>
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+</pre>
+          <div class="speedArea">
+            <pre class="speedCode" id="speedCode" aria-hidden="true"><span class="gh">#include &lt;stdio.h&gt;</span><span class="cmt">  // puts</span><span class="nl">↵</span>
+<span class="nl">↵</span>
+<span class="gh">voi<span class="hid">d</span>	s<span class="hid">o</span>lve(<span class="hid">char</span> *<span class="hid">s</span>, int i, <span class="hid">int</span> <span class="hid">left</span>, <span class="hid">int</span> <span class="hid">open</span>)</span><span class="cmt">  // left = ต้องลบอีกกี่ตัว · open = ( ที่ยังรอคู่</span><span class="nl">↵</span>
+<span class="gh">{</span><span class="nl">↵</span>
+<span class="gh">	if (open &lt; 0)</span><span class="cmt">  // ) เกิน → ทางนี้ใช้ไม่ได้</span><span class="nl">↵</span>
+<span class="gh">		re<span class="hid">tu</span>r<span class="hid">n</span> ;</span><span class="nl">↵</span>
+<span class="gh">	<span class="hid">if</span> (!<span class="hid">s</span>[i])</span><span class="cmt">  // หมดสตริง</span><span class="nl">↵</span>
+<span class="gh">	{</span><span class="nl">↵</span>
+<span class="gh">		if (left == <span class="hid">0</span> &amp;&amp; open == 0)</span><span class="cmt">  // ลบครบ และไม่มี ( ค้าง</span><span class="nl">↵</span>
+<span class="gh">			puts(<span class="hid">s</span>);</span><span class="nl">↵</span>
+<span class="gh">		<span class="hid">return</span> ;</span><span class="nl">↵</span>
+<span class="gh">	}</span><span class="nl">↵</span>
+<span class="gh">	ch<span class="hid">a</span>r	c = s[i];</span><span class="cmt">  // จำตัวเดิมไว้</span><span class="nl">↵</span>
+<span class="gh">	i<span class="hid">f</span> (left &gt; 0)</span><span class="cmt">  // ยังลบได้ → ลองลบตัวนี้</span><span class="nl">↵</span>
+<span class="gh">	{</span><span class="nl">↵</span>
+<span class="gh">		<span class="hid">s</span>[i] = ' ';</span><span class="cmt">  // ลบ = แทนด้วยช่องว่าง</span><span class="nl">↵</span>
+<span class="gh">		s<span class="hid">o</span>lv<span class="hid">e</span>(<span class="hid">s</span>, i + <span class="hid">1</span>, <span class="hid">left</span> - 1, ope<span class="hid">n</span>);</span><span class="nl">↵</span>
+<span class="gh">		s[i] = <span class="hid">c</span>;</span><span class="cmt">  // คืนตัวเดิม</span><span class="nl">↵</span>
+<span class="gh">	}</span><span class="nl">↵</span>
+<span class="gh">	<span class="hid">if</span> (c == '(')</span><span class="cmt">  // ลองเก็บตัวนี้</span><span class="nl">↵</span>
+<span class="gh">		solve(s, i + 1, <span class="hid">left</span>, op<span class="hid">e</span>n + 1);</span><span class="cmt">  // ( เปิดเพิ่ม</span><span class="nl">↵</span>
+<span class="gh">	el<span class="hid">s</span>e</span><span class="nl">↵</span>
+<span class="gh">		solve(<span class="hid">s</span>, <span class="hid">i</span> + 1, left, <span class="hid">open</span> - 1);</span><span class="cmt">  // ) ปิด 1 ตัว</span><span class="nl">↵</span>
+<span class="gh">}</span><span class="nl">↵</span>
+<span class="nl">↵</span>
+<span class="gh">int	main(<span class="hid">int</span> <span class="hid">ac</span>, cha<span class="hid">r</span> **<span class="hid">av</span>)</span><span class="nl">↵</span>
+<span class="gh">{</span><span class="nl">↵</span>
+<span class="gh">	in<span class="hid">t</span>	open = 0;</span><span class="cmt">  // ( ที่ยังไม่มีคู่</span><span class="nl">↵</span>
+<span class="gh">	int	<span class="hid">close</span> = 0;</span><span class="cmt">  // ) ที่ไม่มีคู่</span><span class="nl">↵</span>
+<span class="nl">↵</span>
+<span class="gh">	if (<span class="hid">ac</span> != 2)</span><span class="nl">↵</span>
+<span class="gh">		return (1);</span><span class="nl">↵</span>
+<span class="gh">	fo<span class="hid">r</span> (<span class="hid">int</span> i = 0; <span class="hid">av</span>[1][i]; i++)</span><span class="cmt">  // นับว่าต้องลบน้อยที่สุดกี่ตัว</span><span class="nl">↵</span>
+<span class="gh">	{</span><span class="nl">↵</span>
+<span class="gh">		<span class="hid">if</span> (a<span class="hid">v</span>[<span class="hid">1</span>][<span class="hid">i</span>] == '(')</span><span class="nl">↵</span>
+<span class="gh">			open++;</span><span class="nl">↵</span>
+<span class="gh">		els<span class="hid">e</span> <span class="hid">if</span> (open &gt; 0)</span><span class="cmt">  // ) จับคู่กับ ( ที่รออยู่</span><span class="nl">↵</span>
+<span class="gh">			open--;</span><span class="nl">↵</span>
+<span class="gh">		<span class="hid">else</span></span><span class="nl">↵</span>
+<span class="gh">			c<span class="hid">l</span>ose++;</span><span class="cmt">  // ) ไม่มีคู่</span><span class="nl">↵</span>
+<span class="gh">	}</span><span class="nl">↵</span>
+<span class="gh">	solve(<span class="hid">av</span>[1], <span class="hid">0</span>, o<span class="hid">p</span>en + cl<span class="hid">o</span>s<span class="hid">e</span>, 0);</span><span class="cmt">  // ต้องลบ = open + close</span><span class="nl">↵</span>
+<span class="gh">	return (0);</span><span class="nl">↵</span>
+<span class="gh">}</span><span class="nl">↵</span>
+
+</pre>
+            <textarea id="speedInput" class="speedInput" wrap="off" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" aria-label="พิมพ์โค้ดตรงนี้"></textarea>
+          </div>
+        </div>
+        <div class="speedDone" id="speedDone" hidden=""></div>
+      </div>
+      <aside class="tour" aria-label="คำอธิบายโค้ด">
+        <div class="umPanel" id="umPanel" aria-label="UMPIRE ของข้อนี้"><div class="k">UMPIRE · สั้น</div>
+    <h3>rip ต้องทำอะไร</h3><button class="btn umAnim" id="umAnim"><svg class="ic" aria-hidden="true"><use href="#i-play"></use></svg>ดูภาพเคลื่อนไหว</button><details class="um-doc"><summary>Subject (ต้นฉบับ)</summary><pre class="out">Assignment name  : rip
+Expected files   : *.c *.h
+Allowed functions: puts, write
+--------------------------------------------------------------------------------
+
+Write a program that will take as argument a string containing only parenthesis.
+if the parenthesis are unbalanced (for example "())")
+your program shall remove the minimum number of parentheses for the expression to be balanced.
+By removing we mean replacing by spaces.
+You will then print all the solutions (can be more than one).
+
+The order of the solutions is not important.
+
+For example this should work:
+$&gt; ./rip '(()' | cat -e
+ ()$
+( )$
+$&gt; ./rip '((()()())())' | cat -e
+((()()())())$
+$&gt; ./rip '()())()'| cat -e
+()() ()$
+()( )()$
+( ())()$
+$&gt; ./rip '(()(()(' | cat -e
+(()  ) $
+( )( ) $
+( ) () $
+ ()( ) $</pre></details><details class="um-doc"><summary>อธิบายภาษาไทย</summary><div class="um-thai"><h3>โจทย์</h3>
+<p>รับสตริงวงเล็บทาง <b>argument</b> ลบวงเล็บ <b>น้อยที่สุด</b> ให้สมดุล (ลบ = แทนด้วยช่องว่าง) พิมพ์ทุกคำตอบ</p>
+<pre class="out">./rip '(()'   →   " ()"  และ  "( )"</pre>
+<h3>คำใบ้</h3>
+<ul><li>นับจำนวนที่ต้องลบในรอบเดียว: <code>(</code> → open++, <code>)</code> → ถ้ามี open ก็ open-- ไม่งั้น close++ → ต้องลบ <code>open + close</code> ตัว</li><li>backtracking ทีละตำแหน่ง: <b>ลบ</b> (ถ้ายังมีโควตา) หรือ <b>เก็บ</b></li><li>เก็บยอดวงเล็บเปิดค้าง (depth) ถ้าติดลบเมื่อไหร่ตัดทิ้งได้เลย</li><li>จบสตริงแล้วโควตาหมดและ depth = 0 → <code>puts</code></li></ul>
+<h3>ระวัง</h3>
+<ul><li>ต้องแทนด้วยช่องว่าง ไม่ใช่ตัดออก</li><li>ห้ามมีคำตอบซ้ำ</li><li>สตริงที่สมดุลอยู่แล้ว → พิมพ์ตัวมันเอง</li></ul></div></details><section class="um"><h4><b>U</b>Understand · เข้าใจโจทย์</h4><p>ลบวงเล็บให้น้อยที่สุด (แทนด้วยช่องว่าง) ให้ balanced แล้วพิมพ์ทุกแบบที่เป็นไปได้</p><p class="io">รับ: argument สตริงวงเล็บ · ส่ง: บรรทัดละคำตอบ (ห้ามซ้ำ)</p><p class="um-sub">ตัวอย่าง (ผลจริงจากเฉลย)</p><pre class="out um-ex"><span class="um-cmd">$ ./rip '(()'</span>
+ ()<span class="eol">$</span>
+( )<span class="eol">$</span></pre><pre class="out um-ex"><span class="um-cmd">$ ./rip '()())()'</span>
+( ())()<span class="eol">$</span>
+()( )()<span class="eol">$</span>
+()() ()<span class="eol">$</span></pre><pre class="out um-ex"><span class="um-cmd">$ ./rip '()'</span>
+()<span class="eol">$</span></pre><p class="um-sub">กรณีขอบ</p><ul><li>balanced อยู่แล้ว → พิมพ์เดิม</li><li>วงเล็บที่ลบแทนด้วย <b>ช่องว่าง</b> (ไม่ได้ตัดทิ้ง) ดูช่องว่างหน้า/ท้ายบรรทัดด้วย</li><li>ห้ามพิมพ์บรรทัดซ้ำ</li></ul></section><section class="um"><h4><b>M</b>Match · จับแพทเทิร์น</h4><p><b>ลองทุกทาง (backtracking)</b></p><dl class="um-q"><dt>ครบเมื่อ</dt><dd>ไล่ครบทุกตัวของสตริง</dd><dt>ทางเลือก</dt><dd>ลบ (แทนช่องว่าง) / เก็บ วงเล็บตัวนี้</dd><dt>ผิดกฎเมื่อ</dt><dd>วงเล็บเปิดค้างติดลบ · ลบเกินจำนวนที่ต้องลบ</dd><dt>ครบแล้ว</dt><dd>ลบครบจำนวนและ balanced → พิมพ์</dd></dl></section><section class="um"><h4><b>P</b>Plan · ขั้นตอน</h4><ol><li>นับจำนวนที่ต้องลบ: <code>(</code> ที่ค้าง + <code>)</code> ที่ไม่มีคู่</li><li>ไล่ทีละตัว: ทางที่ 1 ลบ (แทนด้วย <code>' '</code>) ถ้ายังมีโควตา → ทางที่ 2 เก็บไว้</li><li>นับ <code>open</code> ระหว่างทาง ติดลบเมื่อไหร่ = <code>)</code> เกิน ตัดทิ้งทันที</li><li>จบสตริง: ลบครบโควตา และ <code>open == 0</code> → <code>puts</code></li></ol></section><section class="um"><h4><b>I</b>Implement · เขียนทีละชั้น รันทุกชั้น</h4><ol><li>นับจำนวนน้อยที่สุดที่ต้องลบ (open ค้าง + close เกิน) แล้วพิมพ์ตัวเลขดู</li><li>recursion ลอง ลบ / เก็บ พิมพ์ทุกแบบที่ balanced</li><li>เช็คว่าไม่มีบรรทัดซ้ำ</li></ol></section><section class="um"><h4><b>R</b>Review · ไล่ด้วยมือ + จุดที่พลาดบ่อย</h4><ul><li>ไล่ <code>(()</code> ด้วยมือ: ต้องลบ 1 ตัว</li><li>หลังลองลบแล้วคืนตัวเดิม <code>s[i] = c</code> หรือยัง</li><li>นับ open / close ถูกไหม</li></ul></section><section class="um"><h4><b>E</b>Evaluate · ทดสอบก่อนส่ง</h4><pre class="out um-ex"><span class="um-cmd">$ gcc -Wall -Wextra -Werror rip.c -o rip</span></pre><p class="io">รันตัวอย่างทุกอันในข้อ U ให้ผลตรง → ลองกรณีขอบ → push → grademe</p></section></div>
+        <div class="tourNow" id="tourNow"><div class="k">ส่วนที่ 1 / 6 · บรรทัด 1</div><h3>include</h3><p>stdio (puts — พิมพ์แล้วขึ้นบรรทัดใหม่ให้)</p></div>
+        <h4 id="tourFlowHead">แผนผัง — ขึ้นตามที่พิมพ์</h4>
+        <div class="flow" id="tourFlow"></div>
+        <details class="tourSecs" id="tourSecs"><summary id="tourListHead">ส่วนของโค้ด · ⌨ ซ้อมทีละส่วน</summary>
+        <ol class="tourList" id="tourList"><li class="now"><span class="m">›</span><span class="t">include</span><span class="ln">1</span><button class="iconBtn drill" title="ซ้อมเฉพาะส่วนนี้"><svg class="ic" aria-hidden="true"><use href="#i-keyboard"></use></svg></button></li><li><span class="m"></span><span class="t">solve: จบสตริง</span><span class="ln">3–13</span><button class="iconBtn drill" title="ซ้อมเฉพาะส่วนนี้"><svg class="ic" aria-hidden="true"><use href="#i-keyboard"></use></svg></button></li><li><span class="m"></span><span class="t">ทางที่ 1: ลบตัวนี้</span><span class="weak" title="บรรทัดที่พิมพ์ผิดในส่วนนี้ 5 รอบล่าสุด">ผิด 1</span><span class="ln">14–20</span><button class="iconBtn drill" title="ซ้อมเฉพาะส่วนนี้"><svg class="ic" aria-hidden="true"><use href="#i-keyboard"></use></svg></button></li><li><span class="m"></span><span class="t">ทางที่ 2: เก็บตัวนี้</span><span class="ln">21–24</span><button class="iconBtn drill" title="ซ้อมเฉพาะส่วนนี้"><svg class="ic" aria-hidden="true"><use href="#i-keyboard"></use></svg></button></li><li><span class="m"></span><span class="t">main: ต้องลบกี่ตัว</span><span class="ln">26–41</span><button class="iconBtn drill" title="ซ้อมเฉพาะส่วนนี้"><svg class="ic" aria-hidden="true"><use href="#i-keyboard"></use></svg></button></li><li><span class="m"></span><span class="t">เริ่ม</span><span class="ln">42–44</span><button class="iconBtn drill" title="ซ้อมเฉพาะส่วนนี้"><svg class="ic" aria-hidden="true"><use href="#i-keyboard"></use></svg></button></li></ol></details>
+        <h4 id="tourDiffHead">แต่ละชุดต่างกันยังไง</h4>
+        <div id="tourDiff"><dl class="solDiff"><dt class="">ทุกชุด</dt><dd class="">หาจำนวนที่ต้องลบน้อยสุดก่อน (open + close) แล้วลองลบด้วยการแทนเป็น <code>' '</code></dd><dt class="">เฉลยหลัก</dt><dd class="">ไล่ทีละตัว: ลบ หรือ เก็บ พร้อมนับ <code>depth</code> ตัดทิ้งทันทีที่ <code>)</code> เกิน (เร็วกว่า)</dd><dt class="">Modey</dt><dd class="">เลือกตำแหน่งที่จะลบให้ครบโควตาก่อน แล้วค่อยเช็ค <code>valid</code> ทั้งสตริง คิดตามง่ายกว่า แต่ช้ากว่าถ้า input ยาว</dd><dt class="on">สั้น</dt><dd class="on">แบบเดียวกับเฉลยหลัก (ลบ / เก็บ + นับ open) แต่ไม่มีฟังก์ชันแยก นับจำนวนที่ต้องลบใน main</dd></dl></div>
+        <p class="tourHint" id="tourHint">พิมพ์ทับโค้ดจาง ๆ · ไม่สน tab / ช่องว่าง เช็คแค่ตัวโค้ด · เช็คทีละบรรทัด: ขึ้นแดงเมื่อพิมพ์บรรทัดนั้นเสร็จแล้วไปบรรทัดอื่น · Enter ย่อหน้าให้ตามเฉลย · ข้อที่ข้อสอบแจกไฟล์: เห็นทั้งไฟล์ตั้งแต่แรก (สีเทา = ข้อสอบให้มา) เติมเฉพาะช่องว่าง Enter ไปช่องถัดไป · กดชื่อส่วนเพื่อเลื่อนไปดู · ปุ่ม ⌨ = ซ้อมเฉพาะส่วนนั้น · Ctrl+/ ใบ้</p>
+      </aside>
+    </div>
+  </section>
+</main>
+
+
+<dialog id="anim" class="anim" aria-labelledby="animTitle">
+  <div class="animHead">
+    <h3 id="animTitle">ภาพเคลื่อนไหว</h3>
+    <a class="btn" id="animOpen" target="_blank" rel="noopener" title="เปิดในแท็บใหม่"><svg class="ic" aria-hidden="true"><use href="#i-link"></use></svg>เปิดแยก</a>
+    <button type="button" class="btn" id="animClose"><svg class="ic" aria-hidden="true"><use href="#i-x"></use></svg>ปิด</button>
+  </div>
+  <iframe id="animFrame" title="ภาพเคลื่อนไหว" allow="fullscreen" src="./saved_resource.html"></iframe>
+  <p class="animKeys">คลิกที่ภาพ / Space = หยุด · ← → = ถอย / ข้าม 5 วินาที · ปุ่มมุมขวาบน = เต็มจอ</p>
+</dialog>
+
+<dialog id="help" class="help" aria-labelledby="helpTitle">
+  <div class="helpHead">
+    <h3 id="helpTitle">คู่มือ</h3>
+    <button type="button" class="btn" id="helpClose">ปิด</button>
+  </div>
+  <nav class="helpNav">
+    <a href="#h-features">ใช้เว็บนี้ยังไง</a>
+    <a href="#h-input">argument กับ stdin</a>
+  </nav>
+  <div class="helpBody">
+
+  <section id="h-features">
+    <h2>ใช้เว็บนี้ยังไง</h2>
+    <p>เว็บนี้มีไว้ <b>ซ้อมพิมพ์เฉลย</b> ให้จำได้ขึ้นใจ ส่วนการ compile และทดสอบจริงให้ทำใน examshell / terminal</p>
+
+    <h4>ซ้อมพิมพ์</h4>
+    <ul>
+      <li>เลือกข้อทางซ้าย แล้วพิมพ์ตามเฉลยได้ทันที · เลือกชุดเฉลยได้: <b>เฉลยหลัก / Modey / สั้น</b> (ชุดสั้นมีคอมเมนต์ท้ายบรรทัด ไม่ต้องพิมพ์)</li>
+      <li>ไม่สน tab / จำนวนช่องว่าง · เช็คทีละบรรทัดเมื่อย้ายไปบรรทัดอื่น · แดงเฉพาะตัวที่ผิด</li>
+      <li><b>เห็นเฉลย / ครึ่งเดียว / ซ่อนเฉลย</b> = เห็นโค้ดจาง ๆ ครบ / ซ่อนบางคำ (ปรับ %) / ไม่เห็นเลย · <kbd>Ctrl</kbd>+<kbd>/</kbd> ใบ้คำถัดไป</li>
+      <li>ข้อที่ข้อสอบแจกไฟล์ (ft_scanf, broken_gnl, tsp): เห็นทั้งไฟล์ตั้งแต่แรก (สีเทา = ข้อสอบให้มา) เติมเฉพาะช่องว่าง · <kbd>Enter</kbd> ไปช่องถัดไป</li>
+      <li>broken_gnl (เฉลยหลัก / สั้น) = <b>แก้ไฟล์ที่ข้อสอบแจก</b> แบบ diff: <span style="color:var(--bad)">− แดงขีดฆ่า</span> = บรรทัดที่ต้องลบ (<kbd>Backspace</kbd> ครั้งเดียวลบทั้งบรรทัด) · <span style="color:var(--ok)">+</span> = บรรทัดที่ต้องเพิ่ม · <kbd>Enter</kbd> ไปจุดถัดไป</li>
+    </ul>
+
+    <h4>แผงขวา: UMPIRE ของข้อนี้</h4>
+    <ul>
+      <li>subject ต้นฉบับ + คำอธิบายไทย (กดเปิด) แล้วตามด้วย 6 ขั้น: เข้าใจโจทย์ (ตัวอย่างที่รันจริง) → จับแพทเทิร์น → ขั้นตอน → เขียนทีละชั้น → ไล่ด้วยมือ → คำสั่งทดสอบ</li>
+      <li>ใต้แผง: คำอธิบายส่วนที่กำลังพิมพ์ และรายการส่วนของโค้ด (⌨ = ซ้อมเฉพาะส่วนนั้น)</li>
+    </ul>
+  </section>
+
+  <section id="h-input">
+    <h2>argument กับ stdin ต่างกันยังไง</h2>
+    <p>โปรแกรมรับข้อมูลจากภายนอกได้หลายช่องทาง ใน Rank 03 ใช้แค่ 2 ทาง: <b>argument</b> กับ <b>stdin</b>
+       ทั้งสองส่งข้อมูลเข้าโปรแกรมเหมือนกัน แต่ <b>ส่งคนละช่อง และอ่านในโค้ดคนละวิธี</b></p>
+
+    <h3>1. Argument (argv)</h3>
+    <p>คือคำที่พิมพ์ <b>ต่อท้ายชื่อโปรแกรม</b> ตอนสั่งรัน shell จะตัดเป็นคำ ๆ ตามช่องว่าง แล้วส่งให้ <code>main</code> ตั้งแต่โปรแกรมเริ่มทำงาน</p>
+<pre class="out">$&gt; ./powerset 5 1 2 3 4 5</pre>
+<pre class="out">int main(int argc, char **argv)
+{
+    // argc    = 7          จำนวนคำทั้งหมด (นับชื่อโปรแกรมด้วย)
+    // argv[0] = "./powerset"
+    // argv[1] = "5"        ← เป็นสตริงเสมอ! ต้อง atoi เองถ้าอยากได้ตัวเลข
+    // argv[2] = "1" ... argv[6] = "5"
+    // argv[7] = NULL
+}</pre>
+    <ul>
+      <li>ได้ข้อมูลทันที ไม่ต้องเรียกฟังก์ชันอ่าน</li>
+      <li>ทุกตัวเป็น <b>สตริง</b> — ตัวเลขต้องแปลงด้วย <code>atoi(argv[1])</code></li>
+      <li>เช็คจำนวนด้วย <code>argc</code> ก่อนใช้ <code>argv[i]</code> เสมอ ไม่งั้นอ่านเกินขอบ (เช่น <code>if (argc != 2) return 1;</code>)</li>
+      <li>ถ้าข้อมูลมีช่องว่างหรืออักษรพิเศษของ shell อย่าง <code>( ) * $</code> ต้องครอบด้วยเครื่องหมายคำพูด
+          — <code>./rip '(()'</code> ได้ argv[1] = <code>(()</code> (shell ตัดเครื่องหมายคำพูดออกให้)</li>
+      <li><code>./filter "very long pattern"</code> → argument เดียวที่มีช่องว่าง, <code>./filter very long pattern</code> → 3 argument</li>
+    </ul>
+
+    <h3>2. stdin (standard input)</h3>
+    <p>คือ "ท่อ" ข้อมูลที่ไหลเข้าโปรแกรม <b>ระหว่างที่มันรันอยู่</b> เป็น file descriptor หมายเลข <code>0</code> ข้อมูลอาจมาจาก</p>
+<pre class="out">$&gt; echo 'abcdefabc' | ./filter abc      # จากโปรแกรมอื่นผ่าน |
+$&gt; ./tsp &lt; square.txt                    # จากไฟล์ผ่าน &lt;
+$&gt; ./tsp                                 # จากคีย์บอร์ด (พิมพ์แล้วกด Ctrl+D = EOF)</pre>
+    <p>โปรแกรมไม่รู้ว่าข้อมูลมาจากไหน และไม่รู้ว่ายาวเท่าไร — <b>ต้องอ่านเองทีละส่วนจนเจอ EOF</b></p>
+<pre class="out">char    buf[1024];
+ssize_t r;
+
+while ((r = read(0, buf, sizeof(buf))) &gt; 0)   // 0 = stdin
+{
+    // ได้มา r ไบต์ (อาจน้อยกว่าที่ขอ!)
+}
+if (r &lt; 0)       // read พัง
+    ...
+// r == 0 → EOF ข้อมูลหมดแล้ว</pre>
+    <ul>
+      <li>อ่านได้หลายวิธี: <code>read(0, …)</code>, <code>fgetc(stdin)</code>, <code>fscanf(stdin, …)</code>, <code>get_next_line(0)</code></li>
+      <li><code>read</code> อาจคืน <b>น้อยกว่า</b> ที่ขอ แม้ข้อมูลยังไม่หมด — ห้ามคิดว่า read ครั้งเดียวได้ครบ (นี่คือสิ่งที่ test <span class="tag">read สุ่ม</span> จับ)</li>
+      <li>ข้อมูลเป็นไบต์ดิบ ไม่มี <code>'\0'</code> ปิดท้ายให้ — ต้องจำความยาวเอง</li>
+      <li><code>echo</code> เติม <code>\n</code> ท้ายข้อความให้เสมอ ส่วน <code>printf</code> ไม่เติม</li>
+    </ul>
+
+    <h3>3. เทียบกัน</h3>
+    <table>
+      <tbody><tr><th></th><th>argument</th><th>stdin</th></tr>
+      <tr><td>ใส่ตรงไหน</td><td>หลังชื่อโปรแกรม <code>./prog abc</code></td><td>หน้า <code>|</code> หรือหลัง <code>&lt;</code></td></tr>
+      <tr><td>ได้ข้อมูลเมื่อไร</td><td>ทันทีตอนเริ่ม</td><td>ตอนที่เราเรียกอ่าน</td></tr>
+      <tr><td>อ่านยังไง</td><td><code>argv[i]</code></td><td><code>read(0, …)</code> / <code>fgetc</code> / <code>fscanf</code></td></tr>
+      <tr><td>รู้ความยาวไหม</td><td>รู้ (สตริงมี <code>'\0'</code>)</td><td>ไม่รู้ ต้องอ่านจน EOF</td></tr>
+      <tr><td>ใช้กับ</td><td>ค่าสั้น ๆ ตัวเลือก ค่าตั้งต้น</td><td>ข้อมูลยาว หลายบรรทัด</td></tr>
+    </tbody></table>
+
+    <h3>4. ดูจากโจทย์ยังไงว่าต้องใช้อะไร</h3>
+    <p>เราไม่ได้เลือกเอง — <b>subject เป็นคนกำหนด</b> และตัวตรวจส่งมาทางเดียวตามนั้น ดูคำในโจทย์หรือตัวอย่าง:</p>
+    <table>
+      <tbody><tr><th>เจอแบบนี้ในโจทย์</th><th>ใช้</th></tr>
+      <tr><td>"as argument", "given as argument", "take one and only one argument"<br>ตัวอย่าง <code>./rip '(()'</code></td><td><b>argv</b></td></tr>
+      <tr><td>"read from stdin", "from the standard input"<br>ตัวอย่างมี <code>|</code> หรือ <code>&lt;</code></td><td><b>stdin</b></td></tr>
+    </tbody></table>
+    <p>อย่าเขียนให้ "รับได้ทั้งสองแบบ" — เช่น filter ที่ไม่มี argument ต้อง <code>return 1</code> ทันที ถ้าหันไปอ่าน stdin แทนจะ fail
+       และ n_queens ที่ไม่มี argument แล้วไปรอ stdin จะค้างจนหมดเวลา</p>
+
+    <h3>5. Rank 03 แต่ละข้อ</h3>
+    <table>
+      <tbody><tr><th>ข้อ</th><th>รับข้อมูลทาง</th><th>ตัวอย่าง</th></tr>
+      <tr><td>filter</td><td><b>ทั้งสอง</b>: คำที่ต้องหา = argument, ข้อความ = stdin</td><td><code>echo 'abc' | ./filter abc</code></td></tr>
+      <tr><td>ft_scanf</td><td>stdin (<code>fgetc(stdin)</code>)</td><td><code>echo '42 hi x' | ./a.out</code></td></tr>
+      <tr><td>broken_gnl</td><td>fd ที่ส่งเข้ามา (ไฟล์ หรือ 0 = stdin)</td><td><code>get_next_line(fd)</code></td></tr>
+      <tr><td>tsp</td><td>stdin (<code>fscanf(stdin, …)</code> อยู่ใน main ที่ให้มาแล้ว)</td><td><code>./tsp &lt; square.txt</code></td></tr>
+      <tr><td>n_queens</td><td>argument</td><td><code>./n_queens 4</code></td></tr>
+      <tr><td>permutations</td><td>argument</td><td><code>./permutations abc</code></td></tr>
+      <tr><td>powerset</td><td>argument (หลายตัว)</td><td><code>./powerset 3 1 0 2 4 5 3</code></td></tr>
+      <tr><td>rip</td><td>argument</td><td><code>./rip '(()'</code></td></tr>
+    </tbody></table>
+
+    <h3>6. พลาดบ่อย</h3>
+    <ul>
+      <li>ใช้ <code>scanf</code> รับ n ใน n_queens → ตัวตรวจส่งมาทาง argv โปรแกรมเลยนั่งรอ stdin</li>
+      <li>ลืมเช็ค <code>argc</code> แล้วอ่าน <code>argv[1]</code> ตอนไม่มี argument</li>
+      <li>เอา <code>argv[1]</code> ไปเทียบกับตัวเลขตรง ๆ โดยไม่ <code>atoi</code></li>
+      <li>filter: <code>read</code> แค่ครั้งเดียว หรือหาคำทีละ buffer จนคำที่ถูกตัดกลางระหว่าง 2 buffer หลุด</li>
+    </ul>
+  </section>
+
+  </div>
+</dialog>
+
+<dialog id="dialog">
+  <form method="dialog">
+    <h3 id="dialogTitle"></h3>
+    <div id="dialogBody"></div>
+    <menu id="dialogButtons"></menu>
+  </form>
+</dialog>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="assets/js/subjects.js"></script>
+<script src="assets/js/problems.js"></script>
+<script src="assets/js/solutions.js"></script>
+<script src="assets/js/modey-solutions.js"></script>
+<script src="assets/js/short-solutions.js"></script>
+<script src="assets/js/readable-solutions.js"></script>
+<script src="assets/js/walkthrough.js"></script>
+<script src="assets/js/flowcharts.js"></script>
+<script src="assets/js/app.js"></script></body></html>
